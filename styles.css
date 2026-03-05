@@ -1,5 +1,5 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'DM Sans', sans-serif; color: #fff; background: #3a7a3a; }
+body { font-family: 'Familjen Grotesk', sans-serif; color: #fff; background: #3a7a3a; }
 
 /* ── HERO ── */
 .hero {
@@ -20,7 +20,7 @@ body { font-family: 'DM Sans', sans-serif; color: #fff; background: #3a7a3a; }
   letter-spacing: -0.02em;
   margin-bottom: 1.25rem;
 }
-.logo svg { width: 1em; height: 1em; }
+.logo img { width: 1em; height: 1em; position: relative; top: 0.08em; }
 .tagline {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 400;
