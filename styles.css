@@ -1,75 +1,113 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Familjen Grotesk', sans-serif; color: #fff; background: #3a7a3a; }
+body { font-family: 'DM Sans', sans-serif; color: #fff; background: #fff; }
 
 /* ── HERO ── */
 .hero {
-  min-height: 100vh;
+  background: #3a7a3a;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 3.5rem 2rem 3rem;
 }
 .logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 .logo img { width: 1em; height: 1em; position: relative; top: 0.08em; }
 .tagline {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
   font-weight: 400;
-  opacity: 0.8;
+  opacity: 0.85;
   max-width: 580px;
   line-height: 1.5;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
 }
 .cta {
   display: inline-block;
   background: #fff;
   color: #3a7a3a;
-  padding: 0.9rem 2.5rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.05rem;
+  padding: 0.75rem 2.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 .cta:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.15); }
 
-/* ── ABOUT ── */
-.about {
+/* ── CONTENT GRID ── */
+.content {
   background: #fff;
   color: #1a1f1a;
-  padding: 3.5rem 2rem;
+  padding: 3rem 2rem 4rem;
 }
-.about-inner { max-width: 700px; margin: 0 auto; }
-.about h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.75rem; color: #3a7a3a; }
-.about p { font-size: 1.05rem; line-height: 1.7; color: #3d4a3d; }
-
-/* ── CONTACT ── */
-.contact { background: #f4faf4; color: #1a1f1a; padding: 2.5rem 2rem; text-align: center; }
-.contact h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: #3a7a3a; }
-.contact p { font-size: 0.95rem; color: #5a6b5a; line-height: 1.7; }
-.contact a { color: #3a7a3a; text-decoration: none; }
-.contact a:hover { text-decoration: underline; }
-
-/* ── SMS ── */
-.sms { background: #fff; padding: 2.5rem 2rem; }
-.sms-inner { max-width: 700px; margin: 0 auto; font-size: 0.88rem; color: #5a6b5a; line-height: 1.7; }
-.sms-inner h3 { font-size: 0.95rem; color: #1a1f1a; margin-bottom: 0.5rem; }
-.sms-inner a { color: #3a7a3a; }
+.content-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+}
+.content-left {
+  flex: 1;
+}
+.content-right {
+  flex: 0 0 300px;
+}
+.content-block {
+  margin-bottom: 2rem;
+}
+.content-block:last-child {
+  margin-bottom: 0;
+}
+.content-block h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3a7a3a;
+  margin-bottom: 0.6rem;
+}
+.content-block p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3d4a3d;
+}
+.content-block a {
+  color: #3a7a3a;
+  text-decoration: none;
+}
+.content-block a:hover {
+  text-decoration: underline;
+}
+.legal-links {
+  display: flex;
+  gap: 1.25rem;
+}
 
 /* ── FOOTER ── */
 footer { background: #1a3a1a; color: rgba(255,255,255,0.5); padding: 1.5rem 2rem; text-align: center; font-size: 0.8rem; }
 footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 0.75rem; }
 footer a:hover { color: #fff; }
 .footer-links { margin-bottom: 0.5rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .content-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+  .content-right {
+    flex: 1;
+  }
+  .content-block {
+    margin-bottom: 1.75rem;
+  }
+}
 
 /* ── POLICY PAGES ── */
 .policy-page {
